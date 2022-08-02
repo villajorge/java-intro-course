@@ -14,12 +14,12 @@ public class WindowMaster {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter the height of the window:");
-        int height = scan.nextInt();
+        float height = scan.nextFloat();
         System.out.println("Enter the width of the window: ");
-        int width = scan.nextInt();
+        float width = scan.nextFloat();
         
-        int area = height*width;
-        int perimeter = (height*2) + (width*2);
+        float area = height*width;
+        float perimeter = (height*2) + (width*2);
         
         double windowCost = area * 3.5;
         double trimCost = perimeter * 2.25;
