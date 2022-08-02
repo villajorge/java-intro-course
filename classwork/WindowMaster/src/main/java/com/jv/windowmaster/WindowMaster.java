@@ -102,6 +102,6 @@ public class WindowMaster {
         float trimCost = perimeter * trimPrice * numWindows;
         
         System.out.println("Total cost of window is: "+(windowCost+trimCost));
-                 
+        scan.close();      
     }
 }

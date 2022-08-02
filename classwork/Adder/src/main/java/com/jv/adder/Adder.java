@@ -28,6 +28,6 @@ public class Adder {
         intNum1 = Integer.parseInt(num1);
         intNum2 = Integer.parseInt(num2);
         System.out.println(intNum1+" + "+intNum2+" = "+(intNum1+intNum2));
-        
+        scan.close();
     }
 }
