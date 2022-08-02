@@ -13,16 +13,93 @@ public class WindowMaster {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Enter the height of the window:");
-        float height = scan.nextFloat();
-        System.out.println("Enter the width of the window: ");
-        float width = scan.nextFloat();
+        boolean valid = false;
         
+        //Get window Price
+        float windowPrice = 0;
+        String strWindowPrice ="";
+        while (!valid){
+        try{
+            System.out.println("Enter the price of window per square foot: ");
+            strWindowPrice = scan.nextLine();
+            windowPrice = Float.parseFloat(strWindowPrice);
+            
+        }catch (Exception E){
+            System.out.println("Invalid Value");
+            continue;
+        }
+            valid = true;
+        }
+        
+        //Get trim price
+        String strTrimPrice = "";
+        float trimPrice = 0;
+        valid = false;
+        while (!valid){
+            try{
+            System.out.println("Enter the price of trim per linear foot: ");
+            strTrimPrice = scan.nextLine();
+            trimPrice = Float.parseFloat(strTrimPrice);
+            }catch(Exception e){
+                System.out.println("Invalid Value");
+                continue;
+            }
+            valid = true;
+        }
+        
+        //Get height of window
+        String strHeight = "";
+        float height = 0;
+        valid = false;
+        while (!valid){
+            try{
+                System.out.println("Enter the height of the window:");
+                strHeight = scan.nextLine();
+                height = Float.parseFloat(strHeight);
+            }catch (Exception e){
+                System.out.println("Invalid Value");
+                continue;
+            }
+            valid = true;
+        }
+        
+        //Get width of window
+        String strWidth = "";
+        float width = 0;
+        valid = false;
+        while (!valid){
+            try{
+                System.out.println("Enter the width of the window: ");
+                strWidth = scan.nextLine();
+                width = Float.parseFloat(strWidth);
+            }catch(Exception e){
+                System.out.println("Invalid Value");
+                continue;
+            }
+            valid = true;
+        }
+        
+        //Get number of windows
+        String strNumWindows = "";
+        int numWindows = 0;
+        valid = false;
+        while (!valid){
+            try{
+                System.out.println("Enter number of windows: ");
+                strNumWindows = scan.nextLine();
+                numWindows = Integer.parseInt(strNumWindows);
+            }catch(Exception e){
+                System.out.println("Invalid Value");
+                continue;
+            }
+            valid = true;
+        }
         float area = height*width;
+                
         float perimeter = (height*2) + (width*2);
         
-        double windowCost = area * 3.5;
-        double trimCost = perimeter * 2.25;
+        float windowCost = area * windowPrice * numWindows;
+        float trimCost = perimeter * trimPrice * numWindows;
         
         System.out.println("Total cost of window is: "+(windowCost+trimCost));
                  
