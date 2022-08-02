@@ -24,7 +24,7 @@ public class WindowMaster {
             strWindowPrice = scan.nextLine();
             windowPrice = Float.parseFloat(strWindowPrice);
             
-        }catch (Exception E){
+        }catch (NumberFormatException E){
             System.out.println("Invalid Value");
             continue;
         }
@@ -32,7 +32,7 @@ public class WindowMaster {
         }
         
         //Get trim price
-        String strTrimPrice = "";
+        String strTrimPrice;
         float trimPrice = 0;
         valid = false;
         while (!valid){
@@ -40,7 +40,7 @@ public class WindowMaster {
             System.out.println("Enter the price of trim per linear foot: ");
             strTrimPrice = scan.nextLine();
             trimPrice = Float.parseFloat(strTrimPrice);
-            }catch(Exception e){
+            }catch(NumberFormatException e){
                 System.out.println("Invalid Value");
                 continue;
             }
@@ -56,7 +56,7 @@ public class WindowMaster {
                 System.out.println("Enter the height of the window:");
                 strHeight = scan.nextLine();
                 height = Float.parseFloat(strHeight);
-            }catch (Exception e){
+            }catch (NumberFormatException e){
                 System.out.println("Invalid Value");
                 continue;
             }
@@ -72,7 +72,7 @@ public class WindowMaster {
                 System.out.println("Enter the width of the window: ");
                 strWidth = scan.nextLine();
                 width = Float.parseFloat(strWidth);
-            }catch(Exception e){
+            }catch(NumberFormatException e){
                 System.out.println("Invalid Value");
                 continue;
             }
@@ -88,7 +88,7 @@ public class WindowMaster {
                 System.out.println("Enter number of windows: ");
                 strNumWindows = scan.nextLine();
                 numWindows = Integer.parseInt(strNumWindows);
-            }catch(Exception e){
+            }catch(NumberFormatException e){
                 System.out.println("Invalid Value");
                 continue;
             }
