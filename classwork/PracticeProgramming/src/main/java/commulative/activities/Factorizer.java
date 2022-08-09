@@ -13,32 +13,39 @@ import java.util.Scanner;
  * 
  */
 public class Factorizer {
-    public static void main(String[] args){
-        String factors = "";
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Enter number to find its factors");
-        int num = scan.nextInt();
-        int sumFactors = 0;
-        int counter = 0;
-        for (int i = 1; i <= num; i++){
-            if(num%i == 0){
+    private int number;
+    private int sumFactors = 0;
+    private int counter = 0;
+    private String factors = "";
+    
+   Factorizer(int number){
+       this.number = number;
+   }
+    
+        
+    public void getFactors(){
+        for (int i = 1; i <= number; i++){
+            if(number%i == 0){
                 factors += i+" ";
                 sumFactors+=i;
                 counter++;
             }
         }
-        System.out.println("Factors are "+factors);
-        System.out.println(num+" has "+counter+" factors");
-        if (sumFactors-num == num){
-            System.out.println(num+" is a perfect number");
-        }else {
-            System.out.println(num+" is not a perfect number");
-        }
-        if (sumFactors == num+1){
-            System.out.println(num+" is a prime number");
-        }else{
-            System.out.println(num+" is not a prime number");
-        }
-        
     }
+        
+    public void printFactors(){
+        System.out.println("Factors are "+factors);
+        System.out.println(number+" has "+counter+" factors");
+        if (sumFactors-number == number){
+            System.out.println(number+" is a perfect number");
+        }else {
+            System.out.println(number+" is not a perfect number");
+        }
+        if (sumFactors == number+1){
+            System.out.println(number+" is a prime number");
+        }else{
+            System.out.println(number+" is not a prime number");
+            }
+        }
+    
 }
