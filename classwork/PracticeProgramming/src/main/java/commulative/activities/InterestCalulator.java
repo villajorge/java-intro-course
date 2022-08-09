@@ -13,17 +13,18 @@ import java.util.Scanner;
  * 
  */
 public class InterestCalulator {
-    public static void main(String[] args){
-        Scanner scan = new Scanner(System.in);
-        System.out.println("How much are you investing ");
-        double principle = scan.nextDouble();
-        scan.nextLine();
-        System.out.println("How many years are you investing");
-        int years = scan.nextInt();
-        scan.nextLine();
-        System.out.println("What is the annual interest rate % growth");
-        float interest = scan.nextFloat();
-        double interestMoney = 0;
+    private double principle;
+    private int years;
+    private float interest;
+    private double interestMoney = 0;
+    
+    InterestCalulator (double principle, int years, float interest){
+        this.principle = principle;
+        this.years = years;
+        this.interest = interest;
+    }
+    
+    public void getInterest(){
         for (int i = 1; i <= years; i++){
             System.out.println("Year: "+i);
             System.out.println("Began with $"+principle);
@@ -31,7 +32,7 @@ public class InterestCalulator {
             System.out.println("Earned $"+interestMoney);
             principle+=interestMoney;
             System.out.println("Ended with $"+principle);
-        }
+        }   
         
     }
 }

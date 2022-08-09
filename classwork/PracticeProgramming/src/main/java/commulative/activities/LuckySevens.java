@@ -14,9 +14,10 @@ import java.util.Random;
  * 
  */
 public class LuckySevens {
-    public static void main(String[] args){
-        int max = 0;
-        int maxRoll = 0;
+    private int maxRoll = 0;
+    private int max = 0;
+    
+    public void startPlay(){
         Random dice = new Random();
         Scanner scan = new Scanner(System.in);
         System.out.println("How many dollars do you have? ");
