@@ -4,7 +4,6 @@
  */
 
 package commulative.activities;
-import java.util.Scanner;
 /**
  * @author: Jorge Villa 
  * email: villajorge41@gmail.com

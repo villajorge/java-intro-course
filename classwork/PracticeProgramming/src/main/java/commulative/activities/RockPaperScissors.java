@@ -14,7 +14,9 @@ import java.util.Random;
  * 
  */
 public class RockPaperScissors {
-    public static void main(String[] args){
+    
+    
+    public  void getPlays(){
         int games = 0;
         int playAgain = 0;
         Scanner scan = new Scanner(System.in); 
@@ -38,7 +40,7 @@ public class RockPaperScissors {
         System.out.println("Thanks for playing!");
         
     }
-    public static void playGame(int num, Scanner scan){
+    public void playGame(int num, Scanner scan){
         Random rand = new Random();
         int userChoice = 0;
         int compChoice = 0;
