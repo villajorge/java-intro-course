@@ -17,40 +17,39 @@ public class App {
         double a = 0;
         double b = 0;
         int choice = 0;
+        UserIO io = new UserIO();
         SimpleCalculator calc = new SimpleCalculator(a,b);
-        Scanner scan = new Scanner(System.in);
+        int test = io.readInt("Give me an int", 1,10);
         do{
-        System.out.println("Would you like to"
+        
+        choice = io.readInt("Would you like to"
                 + "\n1. Add"
                 + "\n2. Subtract"
                 + "\n3. Divide"
                 + "\n4. Multiply"
-                + "\n5. Quit");
-        choice = scan.nextInt();
+                + "\n5. Quit", 1, 5);
         if (choice == 5){
             break;
         }
-        System.out.println("Enter first operand: ");
-        a = scan.nextDouble();
-        System.out.println("Enter second operand: ");
-        b = scan.nextDouble();
+        a = io.readDouble("Enter first double operand");
+        b = io.readDouble("enter second double operator");
         switch(choice){
             case 1:
-                System.out.println(calc.add(a,b));
+                io.print(a+" + "+b+" = "+calc.add(a,b));
                 break;
             case 2:
-                System.out.println(calc.divide(a, b));
+                io.print(a+" - "+b+" = "+calc.subtract(a, b));
                 break;
             case 3:
-                System.out.println(calc.divide(a, b));
+                io.print(a+" / "+b+" = "+calc.divide(a, b));
                 break;
             case 4:
-                System.out.println(calc.divide(a, b));
+                io.print(a+" * "+b+" = "+calc.multiply(a, b));
                 break;
             case 5:
                 break;
         }
         }while(choice!=5);
-        System.out.println("Thanks for using Simple Calculator!");
+        io.print("Thanks for using Simple Calculator!");
     }
 }
