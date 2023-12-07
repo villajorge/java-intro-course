@@ -4,6 +4,7 @@
  */
 
 package commulative.activities;
+import java.security.SecureRandom;
 import java.util.Scanner;
 import java.util.Random;
 /**
@@ -18,7 +19,7 @@ public class LuckySevens {
     private int max = 0;
     
     public void startPlay(){
-        Random dice = new Random();
+        Random dice = new SecureRandom();
         Scanner scan = new Scanner(System.in);
         System.out.println("How many dollars do you have? ");
         int money = scan.nextInt();

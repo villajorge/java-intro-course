@@ -4,6 +4,7 @@
  */
 
 package com.sg.foundations.flowcontrol.random;
+import java.security.SecureRandom;
 import java.util.Random;
 import java.util.Scanner;
 /**
@@ -15,7 +16,7 @@ import java.util.Scanner;
  */
 public class GuessMeMore {
     public static void main(String[] args){ 
-        Random rand = new Random();
+        Random rand = new SecureRandom();
         Scanner scan = new Scanner(System.in);
         //generate random num -100 to 100
         int num = (rand.nextInt(200)-100);

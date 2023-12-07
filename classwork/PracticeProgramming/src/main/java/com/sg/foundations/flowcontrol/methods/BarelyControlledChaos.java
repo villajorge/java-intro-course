@@ -4,17 +4,18 @@
  */
 
 package com.sg.foundations.flowcontrol.methods;
-import java.util.Random;
-/**
+import java.security.SecureRandom;
+import java.util.Random;/**
  * @author: Jorge Villa 
  * email: villajorge41@gmail.com
  * Date: 
  * Purpose: 
  * 
  */
+
 public class BarelyControlledChaos {
 public static void main(String[] args) {
-        Random rand = new Random();
+        Random rand = new SecureRandom();
         String color = getColor(rand); // call color method here
         String animal = getAnimal(rand); // call animal method again here
         String colorAgain = getColor(rand); // call color method again here

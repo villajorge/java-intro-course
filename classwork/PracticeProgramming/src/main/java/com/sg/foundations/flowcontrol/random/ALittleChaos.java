@@ -4,17 +4,18 @@
  */
 
 package com.sg.foundations.flowcontrol.random;
-import java.util.Random;
-/**
+import java.security.SecureRandom;
+import java.util.Random;/**
  * @author: Jorge Villa 
  * email: villajorge41@gmail.com
  * Date: 
  * Purpose: 
  * 
  */
+
 public class ALittleChaos {
     public static void main(String[] args){
-        Random rand = new Random();
+        Random rand = new SecureRandom();
         System.out.println("Random Int: "+rand.nextInt());
         System.out.println("Random Double: "+rand.nextDouble());
         System.out.println("Random Boolean: "+rand.nextBoolean());

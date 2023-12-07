@@ -4,17 +4,18 @@
  */
 
 package com.sg.foundations.flowcontrol.whiles;
-import java.util.Random;
-/**
+import java.security.SecureRandom;
+import java.util.Random;/**
  * @author: Jorge Villa 
  * email: villajorge41@gmail.com
  * Date: 
  * Purpose: 
  * 
  */
+
 public class LazyTeenager {
     public static void main(String[] args){
-        Random rand = new Random();
+        Random rand = new SecureRandom();
         int chances = 0;
         int counter = 0;
         boolean clean = false;
