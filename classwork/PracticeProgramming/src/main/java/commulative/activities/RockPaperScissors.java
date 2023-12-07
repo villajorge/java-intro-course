@@ -4,6 +4,7 @@
  */
 
 package commulative.activities;
+import java.security.SecureRandom;
 import java.util.Scanner;
 import java.util.Random;
 /**
@@ -41,7 +42,7 @@ public class RockPaperScissors {
         
     }
     public void playGame(int num, Scanner scan){
-        Random rand = new Random();
+        Random rand = new SecureRandom();
         int userChoice = 0;
         int compChoice = 0;
         int wins = 0, loses = 0, draws = 0;
